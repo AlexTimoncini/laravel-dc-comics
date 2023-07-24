@@ -1,1 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
+
+.ivy_comics_thumb{
+    height: 60px;
+    aspect-ratio: 1/1;
+    display: block;
+    object-fit: cover;
+    object-position: 0;
+}
+
+.ivy_comic_img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.ivy_card{
+    width: 500px;
+    margin: auto;
+}
