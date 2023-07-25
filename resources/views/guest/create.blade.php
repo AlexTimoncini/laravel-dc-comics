@@ -19,7 +19,7 @@
         </div>
         <div class="col-12">
             <label for="type" class="form-label">Comic Type</label>
-            <input type="text" class="form-control" id="type" name="comic_type">
+            <input type="text" class="form-control" id="type" name="type">
         </div>
         <div class="col-12">
             <label for="description" class="form-label">Description</label>

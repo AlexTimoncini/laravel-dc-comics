@@ -1,3 +1,5 @@
 <header class="container">
-    I'm a header :D
+    <nav>
+        <a href="{{ route('guest.create') }}" class="primary-link">Add a new comic</a>
+    </nav>
 </header>

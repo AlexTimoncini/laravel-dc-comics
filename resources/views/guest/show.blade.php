@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', '{{ $comic->title }} - DC Comics')
+@section('title', 'Comic - DC Comics')
 
 @section('main-section')
 <div class="container">
