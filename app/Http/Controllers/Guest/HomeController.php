@@ -54,6 +54,6 @@ class HomeController extends Controller
     public function destroy($id){
         $comic = Comic::findOrFail($id);
         $comic->delete();
-        return redirect()->route('guest.home');
+        return redirect()->route('guest.home')->with('delete', $comic->title);
     }
 }
