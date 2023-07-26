@@ -16,4 +16,6 @@ use App\Http\Controllers\Guest\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('guest.home');
 Route::get('/comic/create', [HomeController::class, 'create'])->name('guest.create');
 Route::post('/comic', [HomeController::class, 'store'])->name('guest.store');
+Route::get('/comic/{id}/edit', [HomeController::class, 'edit'])->name('guest.edit');
 Route::get('/comic/{id}', [HomeController::class, 'show'])->name('guest.show');
+Route::put('/comic/{id}', [HomeController::class, 'update'])->name('guest.update');

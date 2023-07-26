@@ -37,4 +37,17 @@ class HomeController extends Controller
 
         return redirect()->route('guest.show', $newComic->id);        
     }
+
+    public function edit($id){
+        $comic = Comic::findOrFail($id);
+        return view('guest.edit', compact('comic'));
+    }
+
+    public function update(Request $request, $id){
+        $data = $request->all();
+        $comic = Comic::findOrFail($id);
+        $comic->update($data);
+
+        return redirect()->route('guest.show', $comic->id);
+    }
 }

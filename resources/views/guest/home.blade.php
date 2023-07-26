@@ -11,6 +11,7 @@
         <th scope="col">Title</th>
         <th scope="col">Series</th>
         <th scope="col">Sale Date</th>
+        <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +28,12 @@
             </td>
             <td>{{ $comic->series }}</td>
             <td>{{ $comic->sale_date }}</td>
+            <td>
+                <form action="{{ route('guest.edit', ['id' => $comic->id]) }}" method="GET">
+                    <button class="btn btn-success">Edit</button>
+                </form>
+                <button class="btn btn-success">Delete</button>
+            </td>
         </tr>
         @endforeach
     </tbody>
