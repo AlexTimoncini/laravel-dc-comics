@@ -18,4 +18,5 @@ Route::get('/comic/create', [HomeController::class, 'create'])->name('guest.crea
 Route::post('/comic', [HomeController::class, 'store'])->name('guest.store');
 Route::get('/comic/{id}/edit', [HomeController::class, 'edit'])->name('guest.edit');
 Route::get('/comic/{id}', [HomeController::class, 'show'])->name('guest.show');
+Route::delete('/comic/{id}', [HomeController::class, 'destroy'])->name('guest.destroy');
 Route::put('/comic/{id}', [HomeController::class, 'update'])->name('guest.update');

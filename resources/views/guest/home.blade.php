@@ -30,9 +30,13 @@
             <td>{{ $comic->sale_date }}</td>
             <td>
                 <form action="{{ route('guest.edit', ['id' => $comic->id]) }}" method="GET">
-                    <button class="btn btn-success">Edit</button>
+                    <button class="btn btn-success" type="submit">Edit</button>
                 </form>
-                <button class="btn btn-success">Delete</button>
+                <form action="{{ route('guest.destroy', ['id' => $comic->id]) }}" method="POST">
+                    @csrf 
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
             </td>
         </tr>
         @endforeach
